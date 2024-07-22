@@ -1,0 +1,137 @@
+
+.spaceing { /* Defines spacing and font type for website*/
+    margin: 0;
+    padding: 0;                   
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body { /* Decorates website body */
+ background-color: #448ed8;
+ color: rgb(0, 0, 0);
+}
+
+.navigate {         /* Decorates Navigation bar*/
+  overflow: hidden;
+  background-color: darkblue;
+  box-sizing: border-box;
+}                          
+
+.navigate a { /* Decorates text in Navigation bar*/
+  float: right;
+  display: block;
+  color: white;
+  text-align: right;
+  padding: 14px 16px;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.navigate a:hover { /* Decorates text in Navigation bar when hovered over*/
+  background-color: gray;
+  color: black;
+  box-sizing: border-box;
+}
+
+h2 { /* Decorates Header*/
+    color: #e3d896;
+    text-align: center;
+}
+
+main {  /* Defines spacing and alignment*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.Gen { /* Defines spacing and alignment for Generator*/
+    width: 100%;
+    max-width: 640px;
+    padding: 2rem 1rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+}
+
+input:not([type="checkbox"]),button {  /* Defines spacing and apperance of inputs*/
+    appearance: none;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+input[type="checkbox"] { /* Defines what cursor looks like going over checkbox*/
+    cursor: pointer;
+}
+
+.pw { /* Defines spacing and alignment for wrapper*/
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.pw::after {  /* Defines spacing and alignment for wrapper after wrapper has been used*/
+    content: '';
+    display: block;
+    position: absolute;
+    top:100%;
+    height: 3px;
+    left: 0;
+    right: 0;
+    border-radius: 3px;
+    background: linear-gradient(to right, #e3d896 25%, #42e6dd 50%);
+}
+
+.pw input { /* Decorates input as well as defines spacing*/
+    flex: 1 1 0%;
+    padding: 0.5rem;
+    color: #282847;
+}
+
+.pw input ::placeholder{ /* Decorates placeholder element*/
+    color:#888;
+    font-size: italic;
+}
+
+.pw button { /* Decorates buttons and defines how cursor looks like when going over button*/
+    cursor: pointer;
+    background: linear-gradient(to bottom,  #e3d896 25%, #42e6dd 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+label { /* Decorates label*/
+    display: flex;
+    user-select: none;
+    margin-bottom: 1rem;
+}
+
+label span{  /* Defines spacing and alignment*/
+    display: block;
+    flex: 1 1 0%;
+    white-space: nowrap;
+}
+
+
+label input[type="Number"] { /* Defines alignment for numbered inputs*/
+    text-align: right;
+}
+
+button[type="submit"] { /* Defines spacing and alignment for sumbit button as well as what cursor looks like going over it*/
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #e3d896 25%, #42e6dd 50%);
+    background-size: 200%;
+    background-position: 25%;
+    transition: 0.3s ease-out;
+    border-radius: 0.5rem;
+}
+
+button[type="submit"]:hover{ /* Defines button position*/
+background-position: 75%;
+}
