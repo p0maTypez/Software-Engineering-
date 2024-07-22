@@ -1,42 +1,60 @@
-const password_el = document.querySelector('#password');  // Definies and links to password
-const length_el = document.querySelector('#length'); // Definies and links to length
-const uppercase_el = document.querySelector('#Uppercase'); // Definies and links to Uppercase
-const lowercase_el = document.querySelector('#Lowercase'); // Definies and links to Lowercase
-const numbers_el = document.querySelector('#Numbers'); // Definies and links to Numbers
-const SC_el = document.querySelector('#SC'); // Definies and links to SC
+const password_el = document.querySelector('#password');
+const length_el = document.querySelector('#length');
+const uppercase_el = document.querySelector('#Uppercase');
+const lowercase_el = document.querySelector('#Lowercase');
+const numbers_el = document.querySelector('#Numbers');
+const sc_el = document.querySelector('#SC');
 
-const generate_btn = document.querySelector("#Generate"); // Definies and links to Generate
-generate_btn.addEventListener('click', generatepass); // makes listener for when generate button is used
-const copy_btn = document.querySelector("#copy"); // Definies and links to copy
-copy_btn.addEventListener('click', copypass); // makes listener for when copy button is used
+const generate_btn = document.querySelector("#Generate");
+generate_btn.addEventListener('click', generatepass);
+const copy_btn = document.querySelector("#copy");
+copy_btn.addEventListener('click', copypass);
 
-const uppercase_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";  // Definies what isUppercase
-const lowercase_chars = "abcdefghijklmnopqrstuvwxyz"; // Definies what is Lowercase
-const numbers_chars = "1234567890"; // Definies what is Numbers
-const SC_chars = "!@#$%^&*()"; // Definies what is SC
+const uppercase_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lowercase_chars = "abcdefghijklmnopqrstuvwxyz";
+const numbers_chars = "1234567890";
+const sc_chars = "!@#$%^&*()";
 
 function generatepass() { 
-    let password = ""; // initalize password
-    let length = length_el.value; // initalize length
-    let chars = ""; // initalize characters
+    let password = "";
+    let length = length_el.value;
+    let chars = "";
 
-    chars += uppercase_el.checked ? uppercase_chars : ""; // checks if checkbox is used and removes previous password
-    chars += lowercase_el.checked ? lowercase_chars : ""; // checks if checkbox is used and removes previous password
-    chars += numbers_el.checked ? numbers_chars : ""; // checks if checkbox is used and removes previous password
-    chars += SC_el.checked ? SC_chars : ""; // checks if checkbox is used and removes previous password
+    chars += uppercase_el.checked ? uppercase_chars : "";
+    chars += lowercase_el.checked ? lowercase_chars : "";
+    chars += numbers_el.checked ? numbers_chars : "";
+    chars += sc_el.checked ? sc_chars : "";
 
-    for (let i = 0; i <= length; i++) {
+    for (let i = 0; i < length; i++) {
         let result = Math.floor(Math.random() * chars.length); 
         password += chars.substring(result, result + 1);
     }
      
-    password_el.value = password; // set password value to password
+    password_el.value = password;
+
+    // Send data to the server
+    savePassword(length, uppercase_el.checked, lowercase_el.checked, numbers_el.checked, sc_el.checked, password);
 }
 
 async function copypass() {
     if (navigator.clipboard) { 
-        await navigator.clipboard.writeText(password_el.value); // makes copy wait for a button press then copies
-        
-        alert("Password copied to clipboard"); // generates alert to allow user to know if copy was succesful
+        await navigator.clipboard.writeText(password_el.value);
+        alert("Password copied to clipboard");
     }
 }
+
+function savePassword(length, use_uppercase, use_lowercase, use_numbers, use_symbols, generated_password) {
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "save_password.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    
+    const data = `length=${length}&use_uppercase=${use_uppercase ? 1 : 0}&use_lowercase=${use_lowercase ? 1 : 0}&use_numbers=${use_numbers ? 1 : 0}&use_symbols=${use_symbols ? 1 : 0}&generated_password=${encodeURIComponent(generated_password)}`;
+    
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            console.log(xhr.responseText);
+        }
+    };
+    xhr.send(data);
+}
+
