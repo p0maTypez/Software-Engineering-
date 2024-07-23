@@ -1,12 +1,17 @@
 # Random Password Generator
 
-A simple and secure random password generator built with Java for the backend and HTML/CSS/JavaScript for the frontend.
+A simple and secure random password generator built with PHP, HTML, CSS, and  JavaScript.
 
 ## Features
 
 - Generates random passwords of specified length
 - Supports uppercase, lowercase, digits, and special characters
 - Simple and responsive web interface
+
+### Prerequisites
+
+- A web server with PHP and MySQL 
+- phpMyAdmin for managing the MySQL database
 
 ## Usage
 Open the website
