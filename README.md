@@ -4,16 +4,19 @@ A simple and secure random password generator built with PHP, HTML, CSS, and  Ja
 
 ## Features
 
-- Generates random passwords of specified length
+- Generates random passwords of a specified length
 - Supports uppercase, lowercase, digits, and special characters
 - Simple and responsive web interface
-- The generated password, along with its configuration, is sent to a server for storage in a MySQL database.
+- The generated password is sent to a server to be stored in a phpmyadmin database (created with a SQL script).
 
 
 ## Usage
 Open the website
+- Click the specification buttons to pick what length, and type of characters you want
 - Click the "Generate Password" button.
 - The generated password will be displayed in the empty space
+- Click on team for information about our developers
+- Click on info for information about our website and software
 
 ## Project Structure 
 - oddHome.html: The main HTML file for the password generator web interface.
@@ -22,9 +25,6 @@ Open the website
 - oddPg.js: The main JavaScript file for handling user interactions on the main page.
 - oaboutus.html - bio page
 - oinfo.html - site description page
-- js/generate_password.js: JavaScript file responsible for password generation.
-- js/fetch_password.js: JavaScript file for handling API requests and responses.
-
 
 ## Installation and Running
 
@@ -48,14 +48,14 @@ Open the website
    
 3. Deploy files
 
-- Place the project files (`index.html, oddhome.html, oddPg.js, script.js, oddStyle.css, style.css, save_password.php`) into the root directory of your web server.
-- Open a web browser and navigate to http://localhost/Software-Engineering-/index.html
+- Place the project files ('oinfo.html, oaboutus.html, oddhome.html, oddPg.js, oddStyle.css, save_password.php`) into the root directory of your web server.
+- Open a web browser and navigate to http://localhost/Software-Engineering-/oddhome.html
 
 ## Running the Application
 
-1. Open index.html or oddhome.html
+1. Open oddhome.html
 
-2. Use a web browser to open either index.html or oddhome.html to start using the password generator.
+2. Use a web browser to open oddHome.html to start using the password generator.
 Generate Password
 
 3. Select the desired settings and click the "Generate Password" button to create a new password.
@@ -66,7 +66,7 @@ Copy Password
 ## Example
 Here is an example of how to generate a password using the application:
 
-1. Open index.html in your web browser.
+1. Open oddHome.html in your web browser.
 2. Enter a length (e.g., 12) in the input field.
 3. Check if you want to include uppercase letters, lowercase letters, numbers, and special characters.
 4. Click the "Generate Password" button.
