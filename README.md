@@ -42,6 +42,24 @@ Open the website
    git clone https://github.com/p0maTypez/Software-Engineering-/tree/main
    cd Software-Engineering-
    
-2. Deploy files
+2. Configure Database connection
 
-- Place the project files (index.html, oddhome.html, oddPg.js, script.js, oddStyle.css, style.css, save_password.php) into the root directory of your web server.
+- Open save_password.php.
+- Update the database connection settings with your credentials
+   
+3. Deploy files
+
+- Place the project files (`index.html, oddhome.html, oddPg.js, script.js, oddStyle.css, style.css, save_password.php`) into the root directory of your web server.
+- Open a web browser and navigate to http://localhost/Software-Engineering-/index.html
+
+## Running the Application
+
+1. Open index.html or oddhome.html
+
+2. Use a web browser to open either index.html or oddhome.html to start using the password generator.
+Generate Password
+
+3. Select the desired settings and click the "Generate Password" button to create a new password.
+Copy Password
+
+4. copy the generated password.
