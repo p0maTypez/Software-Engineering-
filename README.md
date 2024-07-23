@@ -1,6 +1,6 @@
 # Random Password Generator
 
-A simple and secure random password generator built with Java (Spring Boot) for the backend and HTML/CSS/JavaScript for the frontend.
+A simple and secure random password generator built with Java for the backend and HTML/CSS/JavaScript for the frontend.
 
 ## Features
 
