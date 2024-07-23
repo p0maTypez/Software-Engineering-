@@ -1,65 +1,63 @@
 <!DOCTYPE html>
-<html lang ='en'>
-
+<html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <link rel ="stylesheet" href="oddStyle.css" />    <!--Links Html and css files-->
-        
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="oddStyle.css">
+    <title>Password Generator</title>
 </head>
-<body>        
+<body>
+    <div class="navigation">
+        <a href="https://codd.cs.gsu.edu/~Acasanave1/projeect2/oddHome.html">Home</a>
+        <a href="https://codd.cs.gsu.edu/~Acasanave1/projeect2/oaboutus.html">Team</a>
+        <a href="https://codd.cs.gsu.edu/~Acasanave1/projeect2/oinfo.html">Info</a>
+    </div>
+
+    <div id="Header">
+        <h2>Instantly generate secure and random passwords for all of your accounts today!</h2> 
+    </div>
     
-        <div class="navigate">
-           
-                <a href="oddHome.html">Home</a> <!--Links the home attribute to oddHome.html-->
-                <a href="Contact.html">Contact</a> <!--Links the home attribute to (nonexitent) contact.html file-->
-                <a href="Login.html">Login</a> <!--Links the home attribute to (nonexitent) login.html file-->
-             
-        </div>
+    <div class="Gen">
+        <label class="pw">
+            <input type="text" id="password" readonly placeholder="Generate a password" />
+            <button class="material-icons" id="copy"></button>
+        </label>
 
-    
-        
-         
-         <div id="Header">
-            <h2>Instantly generate secure and random password <br> for all of your accounts today!</h2> <!--makes a header for website-->
-         </div>
-    <main>     
-            <div class="Gen"> <!--Makes an overarching class for password generator-->
-                <lable class="pw">  
-                    <input type="text" id="password" readonly placeholder="Generate a password" /> <!--Defines input type and places placeholder text before input is placed--> 
-                    <button class="material-icons" id="copy">content_copy</button> <!--Creates button and gives it purpose-->
-                </lable>
+        <label>
+            <span>Password Length:</span>
+            <input type="number" id="length" value="12" />
+        </label>
 
-                <lable>
-                    <span>Password Length:</span>
-                    <input type="number" id="length" value="12" /> <!--Defines input type and places placeholder text before input is placed-->
-                </lable>
+        <label>
+            <span>Include Uppercase Letters:</span>
+            <input type="checkbox" id="Uppercase" checked />
+        </label>
 
-                <lable>
-                    <span>Include Uppercase Letters:</span>
-                    <input type="checkbox" id="Uppercase" checked /> <!--Defines input type and what it is for-->
-                </lable>
+        <label>
+            <span>Include Lowercase Letters:</span>
+            <input type="checkbox" id="Lowercase" checked />
+        </label>
 
-                <lable>
-                    <span>Include Lowercase Letters:</span>
-                    <input type="checkbox" id="Lowercase" checked /> <!--Defines input type and what it is for-->
-                </lable>
+        <label>
+            <span>Include Numbers:</span>
+            <input type="checkbox" id="Numbers" checked />
+        </label>
 
-                <lable>
-                    <span>Include Numbers:</span>
-                    <input type="checkbox" id="Numbers" checked /> <!--Defines input type and what it is for-->
-                </lable>
+        <label>
+            <span>Include Special Characters:</span>
+            <input type="checkbox" id="SC" checked />
+        </label>
 
-                <lable>
-                    <span>Include Special Characters:</span>
-                    <input type="checkbox" id="SC" checked /> <!--Defines input type and what it is for-->
-                </lable>
+        <button type="submit" id="Generate">Generate Password</button>
+    </div>
 
-                <button type="submit" id="Generate">Generate Password</button> <!--Creates button and gives it purpose-->
-         
-            </div>
-    
-    </main>
+    <!-- Include the JavaScript file at the end of the body -->
+    <script src="oddPg.js"></script>
+</body>
+</html>
 
-    <script src="oddPg.js"></script>  <!--Links Html and Js files-->
+
+
+    </div>
 </body>
 </html>
