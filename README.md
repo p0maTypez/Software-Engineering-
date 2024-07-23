@@ -10,6 +10,6 @@ A simple and secure random password generator built with Java for the backend an
 
 ## Usage
 Open the website
-Click the "Generate Password" button.
-The generated password will be displayed in the empty space
+- Click the "Generate Password" button.
+- The generated password will be displayed in the empty space
 
