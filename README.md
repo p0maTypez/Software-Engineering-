@@ -13,3 +13,14 @@ Open the website
 - Click the "Generate Password" button.
 - The generated password will be displayed in the empty space
 
+## Project Structure 
+Project Structure Explanation
+index.html: The main HTML file for the password generator web interface.
+oddHome.html: An additional HTML file (perhaps another page in your application).
+oddPg.js: JavaScript file for the additional page.
+oddStyle.css: CSS file for the additional page.
+save_password.php: PHP script to handle password generation and storage.
+script.js: The main JavaScript file for handling user interactions on the main page.
+css/style.css: CSS file for styling the main page.
+js/generate_password.js: JavaScript file responsible for password generation.
+js/fetch_password.js: JavaScript file for handling API requests and responses.
