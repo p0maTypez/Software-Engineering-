@@ -63,3 +63,15 @@ Generate Password
 Copy Password
 
 4. copy the generated password.
+
+## Example
+Here is an example of how to generate a password using the application:
+
+1. Open index.html in your web browser.
+2. Enter a length (e.g., 12) in the input field.
+3. Check if you want to include uppercase letters, lowercase letters, numbers, and special characters.
+4. Click the "Generate Password" button.
+5. The generated password (e.g., A1b2C3d4E5f6) will be displayed on the screen.
+
+## Contributions
+
