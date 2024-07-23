@@ -73,5 +73,10 @@ Here is an example of how to generate a password using the application:
 4. Click the "Generate Password" button.
 5. The generated password (e.g., A1b2C3d4E5f6) will be displayed on the screen.
 
-## Contributions
+## Contributors
 
+1. Serusaru (Amara)
+2. sophianoh (Sophia)
+3. p0maTypez (Tony)
+4. eli2k16 (Elijah)
+5. Philanthropenos (Bolaji)
