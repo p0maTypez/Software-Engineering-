@@ -1,3 +1,5 @@
+//we did not end up using this file//
+
 document.getElementById('generate-btn').addEventListener('click', generatePassword);
 document.getElementById('copy-btn').addEventListener('click', copyToClipboard);
 
